@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerAnimationType { Idle = 0, Run = 1 }
 public class PlayerAnimatorController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Animator playerAnim;
+    [SerializeField] private PlayerAnimationType playerAnimationType;
 
-    // Update is called once per frame
-    void Update()
+    private const string stranimationState = "AnimationState";
+    public void OnRunAnimation()
     {
-        
+        playerAnim.SetInteger(stranimationState, (int)PlayerAnimationType.Run);
+    }
+    public void OnIdleAnimation()
+    {
+        playerAnim.SetInteger(stranimationState, (int)PlayerAnimationType.Idle);
     }
 }
