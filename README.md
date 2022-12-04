@@ -1,2 +1,3 @@
-# My-Mini-Mart-Clone
-This repo is my mini mart game clone.
+# Object-Pool
+
+Object-Pool Pattern
